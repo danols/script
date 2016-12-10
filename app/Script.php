@@ -10,4 +10,8 @@ class Script extends Model
 	protected $fillable = [
 		'name', 'code', 'description', 'syntax', 'user_id',
 	];
+
+	public function user {
+		return $this->belongsTo('App\User');
+	}
 }
