@@ -11,7 +11,7 @@ class Script extends Model
 		'name', 'code', 'description', 'syntax', 'user_id',
 	];
 
-	public function user {
+	public function user() {
 		return $this->belongsTo('App\User');
 	}
 }
