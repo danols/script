@@ -11,6 +11,6 @@ class TestController extends Controller
     public function view($id) {
     	$script = Script::find($id);
     	$script->user;
-    	dd($script);
+    	return view('scripts',['script' => $script]);
     }
 }
