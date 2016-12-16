@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace rocket\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Script;
+use rocket\Script;
 
 class TestController extends Controller
 {

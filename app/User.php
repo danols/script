@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace rocket;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -28,6 +28,6 @@ class User extends Authenticatable
     ];
 
     public function scripts() {
-        return $this->hasMany('App\Script');
+        return $this->hasMany('rocket\Script');
     }
 }
