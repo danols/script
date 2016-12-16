@@ -55,7 +55,8 @@
         <div class="ui two column relaxed grid">
           <div class="column">
             <div class="ui blue segment">
-              <form class="ui large form">
+              <form class="ui large form" action="admin/users/add" method="post">
+                {{ csrf_field() }}
                 <h3 class="ui dividing header">Sign Up</h3>
                 <div class="field">
                   <div class="two fields">
@@ -342,14 +343,14 @@
                       <label>Password</label>
                       <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input type="password" name="name" placeholder="Your password">
+                        <input type="password" name="password" placeholder="Your password">
                       </div>
                     </div>
                     <div class="field">
                       <label>Confirm Password</label>
                       <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input type="password" name="name" placeholder="Your password again">
+                        <input type="password" name="password1" placeholder="Your password again">
                       </div>
                     </div>
                   </div>

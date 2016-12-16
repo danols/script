@@ -12,10 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
-Route::get('scripts/{id}',[
-	'uses' => 'TestController@view',
-	'as' => 'scriptsView'
-]);
+Route::group(['prefix' => 'admin'], function () {
+	Route::group(['prefix' => 'users'], function () {
+		Route::post('add','UsersController@store');
+		Route::get('all','UsersController@index');
+	});
+});
